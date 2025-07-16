@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { createClient } from '@supabase/supabase-js'
+import { createClient, User } from '@supabase/supabase-js'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
@@ -24,7 +24,7 @@ type Produto = {
 
 export default function Home() {
   const [produtos, setProdutos] = useState<Produto[]>([])
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<User | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function Home() {
     setUser(user)
   }
 
-  async function handleLogin() {
+  function handleLogin() {
     router.push('/login')
   }
 
