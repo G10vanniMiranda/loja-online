@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#### Criar o projeto
 
-## Getting Started
+#### Mudar o favicon
 
-First, run the development server:
+#### Conectar o banco
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#### Usar a doc
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Gerar o home com supabase
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### Shadcn
+npx shadcn@latest init
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### Supabase
 
-## Learn More
+npm install @supabase/supabase-js
 
-To learn more about Next.js, take a look at the following resources:
+* Client
+````
+import { createClient } from '@supabase/supabase-js'
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+````
 
-## Deploy on Vercel
+#### Conexão
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+https://jyrimgynflxmtjhhkyrs.supabase.co
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp5cmltZ3luZmx4bXRqaGhreXJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk4ODYwNzIsImV4cCI6MjA1NTQ2MjA3Mn0.H_5D1uvr2cLHYxa-bvk8bpc-ya6IPTcoPKx2cONIa00
